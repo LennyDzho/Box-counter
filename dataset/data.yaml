@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['group_box_left', 'group_box_top', 'laptop_left', 'laptop_top', 'palet', 'tablet_left', 'tablet_top']
+
+roboflow:
+  workspace: dataset-o4eny
+  project: boxes-bxdaw
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/dataset-o4eny/boxes-bxdaw/dataset/2

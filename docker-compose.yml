@@ -1,0 +1,19 @@
+services:
+  box_counter:
+    build: .
+    container_name: box_counter
+    volumes:
+      - ./images:/root/images
+      - ./results:/root/results
+      - ./main.py:/root/main.py
+      - ./requirements.txt:/root/requirements.txt
+      - ./best.pt:/root/best.pt
+
+
+    working_dir: /root
+    tty: true
+    stdin_open: true
+    entrypoint: >
+      bash -c "pip install -r requirements.txt &&
+               python3 main.py &&
+               cat results/result.csv"
